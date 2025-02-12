@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Тест на тип мислення (Резапкін Г. В.)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      background-color: #fff;
+      padding: 20px 30px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1, h2, h3 {
+      text-align: center;
+    }
+    .question {
+      margin-bottom: 15px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 10px;
+    }
+    .question p {
+      margin: 5px 0;
+    }
+    .answers {
+      margin-left: 20px;
+    }
+    .answers label {
+      margin-right: 20px;
+    }
+    .button {
+      display: block;
+      width: 250px;
+      margin: 20px auto;
+      padding: 10px;
+      background-color: #007BFF;
+      color: #fff;
+      text-align: center;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 5px;
+    }
+    .button:hover {
+      background-color: #0056b3;
+    }
+    .result-section, .more-info-section, .course-details-section {
+      display: none;
+      margin-top: 30px;
+      padding: 20px;
+      background-color: #e9ecef;
+      border-radius: 5px;
+    }
+    .result-section p, .more-info-section p, .course-details-section p {
+      margin: 10px 0;
+    }
+    .description {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #f1f1f1;
+      border-radius: 5px;
+    }
+    .description h3 {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Заголовок та вступний текст -->
+    <h1>Тест на тип мислення (Резапкін Г. В.)</h1>
+    <p>Цей тест допоможе вам визначити, який тип мислення у вас домінує: предметно-дійове, абстрактно-символічне, словесно-логічне, наочно-образне або креативне. Відповідайте чесно, вибираючи найбільш відповідний варіант.</p>
+    <p>Потім ідуть 40 питань з варіантами відповідей: так або ні</p>
+    
+    <!-- Форма тесту -->
+    <form id="testForm">
+      <!-- Питання 1 -->
+      <div class="question">
+        <p>1. Мені легше щось зробити самим, ніж пояснювати іншому.</p>
+        <div class="answers">
+          <label><input type="radio" name="q1" value="так"> так</label>
+          <label><input type="radio" name="q1" value="ні"> ні</label>
+        </div>
+      </div>
+      <!-- Питання 2 -->
+      <div class="question">
+        <p>2. Мені цікаво складати комп’ютерні програми.</p>
+        <div class="answers">
+          <label><input type="radio" name="q2" value="так"> так</label>
+          <label><input type="radio" name="q2" value="ні"> ні</label>
+        </div>
+      </div>
+      <!-- Питання 3 -->
+      <div class="question">
+        <p>3. Я люблю читати книжки.</p>
+        <div class="answers">
+          <label><input type="radio" name="q3" value="так"> так</label>
+          <label><input type="radio" name="q3" value="ні"> ні</label>
+        </div>
+      </div>
+      <!-- Питання 4 -->
+      <div class="question">
+        <p>4. Мені подобається живопис, скульптура, архітектура.</p>
+        <div class="answers">
+          <label><input type="radio" name="q4" value="так"> так</label>
+          <label><input type="radio" name="q4" value="ні"> ні</label>
+        </div>
+      </div>
+      <!-- Питання 5 -->
+      <div class="question">
+        <p>5. Навіть у налагодженій справі я намагаюся дещо покращити.</p>
+        <div class="answers">
+          <label><input type="radio" name="q5" value="так"> так</label>
+          <label><input type="radio" name="q5" value="ні"> ні</label>
+        </div>
+      </div>
+      <!-- Питання 6 -->
+      <div class="question">
+        <p>6. Я краще розумію, якщо мені пояснюють на предметах або малюнках.</p>
+        <div class="answers">
+          <label><input type="radio" name="q6" value="так"> так</label>
+          <label><input type="radio" name="q6" value="ні"> ні</label>
+        </div>
+      </div>
+      <!-- Питання 7 -->
+      <div class="question">
+        <p>7. Я люблю грати в шахи.</p>
+        <div class="answers">
+          <label><input type="radio" name="q7" value="так"> так</label>
+          <label><input type="radio" name="q7" value="ні"> ні</label>
+        </div>
+      </div>
+      <!-- Питання 8 -->
+      <div class="question">
+        <p>8. Я легко висловлюю свої думки як в усній, так і в письмовій формі.</p>
+        <div class="answers">
+          <label><input type="radio" name="q8" value="так"> так</label>
+          <label><input type="radio" name="q8" value="ні"> ні</label>
+        </div>
+      </div>
+      <!-- Питання 9 -->
+      <div class="question">
+        <p>9. Коли я читаю книжку, я чітко бачу її героїв та події, які в ній змальовуються.</p>
+        <div class="answers">
+          <label><input type="radio" name="q9" value="так"> так</label>
+          <label><input type="radio" name="q9" value="ні"> ні</label>
+        </div>
+      </div>
+      <!-- Питання 10 -->
+      <div class="question">
+        <p>10. Я надаю перевагу самостійному плануванню своєї роботи.</p>
+        <div class="answers">
+          <label><input type="radio" name="q10" value="так"> так</label>
+          <label><input type="radio" name="q10" value="ні"> ні</label>
+        </div>
+      </div>
+      <!-- Питання 11 -->
+      <div class="question">
+        <p>11. Мені подобається все робити своїми руками.</p>
+        <div class="answers">
+          <label><input type="radio" name="q11" value="так"> так</label>
+          <label><input type="radio" name="q11" value="ні"> ні</label>
+        </div>
+      </div>
+      <!-- Питання 12 -->
+      <div class="question">
+        <p>12. У дитинстві я створював свій шифр для переписки з друзями.</p>
+        <div class="answers">
+          <label><input type="radio" name="q12" value="так"> так</label>
+          <label><input type="radio" name="q12" value="ні"> ні</label>
+        </div>
+      </div>
+      <!-- Питання 13 -->
+      <div class="question">
+        <p>13. Я надаю велике значення сказаному слову.</p>
+        <div class="answers">
+          <label><input type="radio" name="q13" value="так"> так</label>
+          <label><input type="radio" name="q13" value="ні"> ні</label>
+        </div>
+      </div>
+      <!-- Питання 14 -->
+      <div class="question">
+        <p>14. Знайомі мелодії викликають у мене в голові певні картини.</p>
+        <div class="answers">
+          <label><input type="radio" name="q14" value="так"> так</label>
+          <label><input type="radio" name="q14" value="ні"> ні</label>
+        </div>
+      </div>
+      <!-- Питання 15 -->
+      <div class="question">
+        <p>15. Різноманітні захоплення роблять життя людини багатше та яскравіше.</p>
+        <div class="answers">
+          <label><input type="radio" name="q15" value="так"> так</label>
+          <label><input type="radio" name="q15" value="ні"> ні</label>
+        </div>
+      </div>
+      <!-- Питання 16 -->
+      <div class="question">
+        <p>16. При вирішуванні задачі мені легше йти методом спроб та помилок.</p>
+        <div class="answers">
+          <label><input type="radio" name="q16" value="так"> так</label>
+          <label><input type="radio" name="q16" value="ні"> ні</label>
+        </div>
+      </div>
+      <!-- Питання 17 -->
+      <div class="question">
+        <p>17. Мені цікаво розбиратися у природі фізичних явищ.</p>
+        <div class="answers">
+          <label><input type="radio" name="q17" value="так"> так</label>
+          <label><input type="radio" name="q17" value="ні"> ні</label>
+        </div>
+      </div>
+      <!-- Питання 18 -->
+      <div class="question">
+        <p>18. Мені цікава робота ведучого теле-радіопрограм, журналіста.</p>
+        <div class="answers">
+          <label><input type="radio" name="q18" value="так"> так</label>
+          <label><input type="radio" name="q18" value="ні"> ні</label>
+        </div>
+      </div>
+      <!-- Питання 19 -->
+      <div class="question">
+        <p>19. Мені легко уявити предмет чи тварину, яких немає у природі.</p>
+        <div class="answers">
+          <label><input type="radio" name="q19" value="так"> так</label>
+          <label><input type="radio" name="q19" value="ні"> ні</label>
+        </div>
+      </div>
+      <!-- Питання 20 -->
+      <div class="question">
+        <p>20. Мені більше подобається процес діяльності, ніж сам результат.</p>
+        <div class="answers">
+          <label><input type="radio" name="q20" value="так"> так</label>
+          <label><input type="radio" name="q20" value="ні"> ні</label>
+        </div>
+      </div>
+      <!-- Питання 21 -->
+      <div class="question">
+        <p>21. Мені подобалось в дитинстві збирати конструктор з деталей, лего.</p>
+        <div class="answers">
+          <label><input type="radio" name="q21" value="так"> так</label>
+          <label><input type="radio" name="q21" value="ні"> ні</label>
+        </div>
+      </div>
+      <!-- Питання 22 -->
+      <div class="question">
+        <p>22. Я надаю перевагу точним наукам (математика, фізика).</p>
+        <div class="answers">
+          <label><input type="radio" name="q22" value="так"> так</label>
+          <label><input type="radio" name="q22" value="ні"> ні</label>
+        </div>
+      </div>
+      <!-- Питання 23 -->
+      <div class="question">
+        <p>23. Мене захоплює точність та глибинність деяких віршів.</p>
+        <div class="answers">
+          <label><input type="radio" name="q23" value="так"> так</label>
+          <label><input type="radio" name="q23" value="ні"> ні</label>
+        </div>
+      </div>
+      <!-- Питання 24 -->
+      <div class="question">
+        <p>24. Знайомий запах викликає у моїй пам'яті події минулого.</p>
+        <div class="answers">
+          <label><input type="radio" name="q24" value="так"> так</label>
+          <label><input type="radio" name="q24" value="ні"> ні</label>
+        </div>
+      </div>
+      <!-- Питання 25 -->
+      <div class="question">
+        <p>25. Я не хотів би підпорядковувати своє життя певній системі.</p>
+        <div class="answers">
+          <label><input type="radio" name="q25" value="так"> так</label>
+          <label><input type="radio" name="q25" value="ні"> ні</label>
+        </div>
+      </div>
+      <!-- Питання 26 -->
+      <div class="question">
+        <p>26. Коли я чую музику, мені хочеться танцювати.</p>
+        <div class="answers">
+          <label><input type="radio" name="q26" value="так"> так</label>
+          <label><input type="radio" name="q26" value="ні"> ні</label>
+        </div>
+      </div>
+      <!-- Питання 27 -->
+      <div class="question">
+        <p>27. Я розумію красу математичних формул.</p>
+        <div class="answers">
+          <label><input type="radio" name="q27" value="так"> так</label>
+          <label><input type="radio" name="q27" value="ні"> ні</label>
+        </div>
+      </div>
+      <!-- Питання 28 -->
+      <div class="question">
+        <p>28. Мені легко говорити перед будь-якою аудиторією.</p>
+        <div class="answers">
+          <label><input type="radio" name="q28" value="так"> так</label>
+          <label><input type="radio" name="q28" value="ні"> ні</label>
+        </div>
+      </div>
+      <!-- Питання 29 -->
+      <div class="question">
+        <p>29. Я люблю відвідувати виставки, вистави, концерти.</p>
+        <div class="answers">
+          <label><input type="radio" name="q29" value="так"> так</label>
+          <label><input type="radio" name="q29" value="ні"> ні</label>
+        </div>
+      </div>
+      <!-- Питання 30 -->
+      <div class="question">
+        <p>30. Я піддаю сумніву навіть те, що для інших є очевидним.</p>
+        <div class="answers">
+          <label><input type="radio" name="q30" value="так"> так</label>
+          <label><input type="radio" name="q30" value="ні"> ні</label>
+        </div>
+      </div>
+      <!-- Питання 31 -->
+      <div class="question">
+        <p>31. Я люблю займатися рукоділлям, щось майструвати.</p>
+        <div class="answers">
+          <label><input type="radio" name="q31" value="так"> так</label>
+          <label><input type="radio" name="q31" value="ні"> ні</label>
+        </div>
+      </div>
+      <!-- Питання 32 -->
+      <div class="question">
+        <p>32. Мені б було цікаво розшифрувати древні тайнописання.</p>
+        <div class="answers">
+          <label><input type="radio" name="q32" value="так"> так</label>
+          <label><input type="radio" name="q32" value="ні"> ні</label>
+        </div>
+      </div>
+      <!-- Питання 33 -->
+      <div class="question">
+        <p>33. Я легко засвоюю граматичні конструкції мови.</p>
+        <div class="answers">
+          <label><input type="radio" name="q33" value="так"> так</label>
+          <label><input type="radio" name="q33" value="ні"> ні</label>
+        </div>
+      </div>
+      <!-- Питання 34 -->
+      <div class="question">
+        <p>34. Я згоден з Ф. М. Достоєвським, що краса врятує світ.</p>
+        <div class="answers">
+          <label><input type="radio" name="q34" value="так"> так</label>
+          <label><input type="radio" name="q34" value="ні"> ні</label>
+        </div>
+      </div>
+      <!-- Питання 35 -->
+      <div class="question">
+        <p>35. Не люблю ходити одним і тим же шляхом.</p>
+        <div class="answers">
+          <label><input type="radio" name="q35" value="так"> так</label>
+          <label><input type="radio" name="q35" value="ні"> ні</label>
+        </div>
+      </div>
+      <!-- Питання 36 -->
+      <div class="question">
+        <p>36. Істинно тільки те, до чого можна доторкнутися руками.</p>
+        <div class="answers">
+          <label><input type="radio" name="q36" value="так"> так</label>
+          <label><input type="radio" name="q36" value="ні"> ні</label>
+        </div>
+      </div>
+      <!-- Питання 37 -->
+      <div class="question">
+        <p>37. Я легко запам’ятовую формули, символи, умовні позначення.</p>
+        <div class="answers">
+          <label><input type="radio" name="q37" value="так"> так</label>
+          <label><input type="radio" name="q37" value="ні"> ні</label>
+        </div>
+      </div>
+      <!-- Питання 38 -->
+      <div class="question">
+        <p>38. Друзі люблять слухати, коли я їм щось розповідаю.</p>
+        <div class="answers">
+          <label><input type="radio" name="q38" value="так"> так</label>
+          <label><input type="radio" name="q38" value="ні"> ні</label>
+        </div>
+      </div>
+      <!-- Питання 39 -->
+      <div class="question">
+        <p>39. Я легко можу уявити в образах зміст розповіді чи фільму.</p>
+        <div class="answers">
+          <label><input type="radio" name="q39" value="так"> так</label>
+          <label><input type="radio" name="q39" value="ні"> ні</label>
+        </div>
+      </div>
+      <!-- Питання 40 -->
+      <div class="question">
+        <p>40. Я не можу заспокоїтись, доки не доведу свою роботу до бездоганності.</p>
+        <div class="answers">
+          <label><input type="radio" name="q40" value="так"> так</label>
+          <label><input type="radio" name="q40" value="ні"> ні</label>
+        </div>
+      </div>
+      
+      <!-- Кнопка для отримання результату -->
+      <button type="button" class="button" id="getResultBtn">Отримати результат</button>
+    </form>
+    
+    <!-- Секція для відображення результатів тесту -->
+    <div class="result-section" id="resultSection">
+      <h2>Результати тесту</h2>
+      <div id="results"></div>
+      <div id="descriptions">
+        <!-- Опис кожного типу мислення -->
+        <div class="description">
+          <h3>Предметно-дійове мислення</h3>
+          <p>Предметно-дійове мислення притаманне людям справи. Вони засвоюють інформацію через рухи. Зазвичай вони володіють хорошою координацією дій. Їх руками створений весь оточуючий нас предметний світ. Вони керують машинами, стоять біля станків, збирають комп’ютери. Без них неможливо реалізувати найблискавичнішу ідею. Цей тип мислення важливий для спортсменів, танцюристів, артистів.</p>
+        </div>
+        <div class="description">
+          <h3>Абстрактно-символічне мислення</h3>
+          <p>Абстрактно-символичним мисленням володіють багато вчених – фізики-теоретики, математики, економісти, програмісти, аналітики. Вони можуть засвоювати інформацію за допомогою математичних кодів, формул та операцій, до яких не можна ні доторкнутися, ні уявити. Завдяки особливостям такого мислення, на основі гіпотези, зроблені численні відкриття у всіх областях науки.</p>
+        </div>
+        <div class="description">
+          <h3>Словесно-логічне мислення</h3>
+          <p>Словесно-логічне мислення виокремлює людей з яскраво вираженим вербальним інтелектом (от лат. verbalis – словесний). Завдяки розвинутому словесно-логічному мисленню вчений, викладач, перекладач, письменник, філолог, журналіст можуть сформулювати свої думки та донести їх до людей. Це вміння необхідне керівникам, політикам та суспільним діячам.</p>
+        </div>
+        <div class="description">
+          <h3>Наочно-образне мислення</h3>
+          <p>Наочно-образним мисленням володіють люди з художнім складом розуму, які можуть уявити і те, що було, і те, чого ніколи не було і не буде – художники, поети, письменники, режисери. Архітектор, конструктор, дизайнер, режисер мають володіти розвинутим наочно-образним мисленням.</p>
+        </div>
+        <div class="description">
+          <h3>Креативність (творчість)</h3>
+          <p>Креативність – це здатність міркувати творчо, знаходити нестандартні рішення задач. Це рідка та нічим не замінна якість, яка виокремлює людей талановитих у будь-якій сфері діяльності.</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Кнопка "Дізнатися про себе ще більше" -->
+    <button type="button" class="button" id="moreInfoBtn">Дізнатися про себе ще більше</button>
+    
+    <!-- Секція з інформацією про курс -->
+    <div class="more-info-section" id="moreInfoSection">
+      <p>Я створив курс “Живи на повну”, який допомагає розкрити свій потенціал, зрозуміти Божу волю про себе, свої сильні та слабкі сторони, зрозуміти своє призначення в житті.</p>
+      <!-- Кнопка "Дізнатися більше про курс" -->
+      <button type="button" class="button" id="courseInfoBtn">Дізнатися більше про курс</button>
+    </div>
+    
+    <!-- Секція з детальною інформацією про курс -->
+    <div class="course-details-section" id="courseDetailsSection">
+      <p>Курс «Живи на повну» складається з:</p>
+      <p>▫️5 відео (теоретична частина)<br>
+▫️5 психологічних тестів (практична частина)<br>
+1 тема: "Хто ми, звідки і для чого?". Тут я повертатиму сенс тим, хто його втратив. Мотивуватиму і аргументуватиму, що ми тут для більшого.<br>
+2 тема: "Яка Божа воля про мене?". Тут поговоримо про ціль нашого існування, про Божу волю для людини і її призначення.<br>
+3 тема: "Як отримувати відповіді від Бога?". Тут поговоримо про найкращі практичні методи через які можна чути Бога, розуміти Його волю про себе. По цій темі буде практичне д/з.<br>
+4 тема: "Як знайти своє персональне призначення?". Тут ми поговоримо про наші здібності, таланти і які конкретні речі вказують на те, чим мені займатися в житті.<br>
+5 тема: "Формуємо план "Життя на повну"". Це буде завершальна тема, перед нею ще будуть 5 психологічних тестів, які допоможуть краще зрозуміти себе, свої сильні і слабкі сторони. На основі цих даних і всього матеріалу сформуємо вашу дорожню карту.<br>
+Курс проходить в закритій групі телеграм з вічним доступом. Вартість 700 грн. Навіть по завершенню курсу в групу періодично додаватиметься корисна інформація по темі курсу.</p>
+      <!-- Кнопка "Перейти до оплати" -->
+      <button type="button" class="button" id="paymentBtn">Перейти до оплати</button>
+    </div>
+    
+  </div>
+  
+  <script>
+    // Функція для підрахунку балів за тестом
+    document.getElementById('getResultBtn').addEventListener('click', function() {
+      // Визначення ключа відповідності питань до типів мислення
+      const key = {
+        "предметно-дійове": [1, 6, 11, 16, 21, 26, 31, 36],
+        "абстрактно-символічне": [2, 7, 12, 17, 22, 27, 32, 37],
+        "словесно-логічне": [3, 8, 13, 18, 23, 28, 33, 38],
+        "наочно-образне": [4, 9, 14, 19, 24, 29, 34, 39],
+        "креативність": [5, 10, 15, 20, 25, 30, 35, 40]
+      };
+      
+      // Ініціалізація об'єкта для підрахунку балів
+      let scores = {
+        "предметно-дійове": 0,
+        "абстрактно-символічне": 0,
+        "словесно-логічне": 0,
+        "наочно-образне": 0,
+        "креативність": 0
+      };
+      
+      // Проходимо по кожному типу мислення та його питанням
+      for (let type in key) {
+        key[type].forEach(function(qNum) {
+          const answer = document.querySelector('input[name="q' + qNum + '"]:checked');
+          if (answer && answer.value === "так") {
+            scores[type]++;
+          }
+        });
+      }
+      
+      // Функція для визначення рівня
+      function getLevel(score) {
+        if (score >= 0 && score <= 2) {
+          return "низький";
+        } else if (score >= 3 && score <= 5) {
+          return "середній";
+        } else if (score >= 6 && score <= 8) {
+          return "високий";
+        } else {
+          return "";
+        }
+      }
+      
+      // Формування тексту результатів
+      let resultsText = "";
+      for (let type in scores) {
+        let level = getLevel(scores[type]);
+        let typeName = "";
+        if (type === "предметно-дійове") {
+          typeName = "Предметно-дійове мислення";
+        } else if (type === "абстрактно-символічне") {
+          typeName = "Абстрактно-символічне мислення";
+        } else if (type === "словесно-логічне") {
+          typeName = "Словесно-логічне мислення";
+        } else if (type === "наочно-образне") {
+          typeName = "Наочно-образне мислення";
+        } else if (type === "креативність") {
+          typeName = "Креативність (творчість)";
+        }
+        resultsText += "<p>" + typeName + ": " + scores[type] + " балів — " + level + "</p>";
+      }
+      
+      // Відображення результатів
+      document.getElementById('results').innerHTML = resultsText;
+      document.getElementById('resultSection').style.display = "block";
+      
+      // Прокрутка до секції результатів
+      document.getElementById('resultSection').scrollIntoView({ behavior: 'smooth' });
+    });
+    
+    // Обробка кнопки "Дізнатися про себе ще більше"
+    document.getElementById('moreInfoBtn').addEventListener('click', function() {
+      const moreInfoSection = document.getElementById('moreInfoSection');
+      if (moreInfoSection.style.display === "block") {
+        moreInfoSection.style.display = "none";
+      } else {
+        moreInfoSection.style.display = "block";
+        moreInfoSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+    
+    // Обробка кнопки "Дізнатися більше про курс"
+    document.getElementById('courseInfoBtn').addEventListener('click', function() {
+      const courseDetailsSection = document.getElementById('courseDetailsSection');
+      if (courseDetailsSection.style.display === "block") {
+        courseDetailsSection.style.display = "none";
+      } else {
+        courseDetailsSection.style.display = "block";
+        courseDetailsSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+    
+    // Обробка кнопки "Перейти до оплати"
+    document.getElementById('paymentBtn').addEventListener('click', function() {
+      window.location.href = "https://send.monobank.ua/jar/6UfrYYA9YX";
+    });
+  </script>
+</body>
+</html>
